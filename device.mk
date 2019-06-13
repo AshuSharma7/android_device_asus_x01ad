@@ -290,7 +290,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.target.rc \
-    init.sakura.rc \
     move_time_data.sh \
     move_wifi_data.sh \
     ueventd.qcom.rc
@@ -302,13 +301,19 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2 \
     android.hardware.secure_element@1.0 \
     librmnetctl \
+    rild \
+    libprotobuf-cpp-full \
     libcnefeatureconfig \
     libxml2 \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
+    qcrilhook \
     telephony-ext
 
 # Seccomp policy
