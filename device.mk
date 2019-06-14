@@ -119,6 +119,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
+    android.frameworks.displayservice@1.0_32 \
     Snap
 
 # Consumerir
@@ -198,6 +199,12 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common
+    
+# IPv6
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libebtc
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -280,8 +287,19 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.qti.qseecomd.sh \
+    init.class_main.sh \
+    init.crda.sh \
+    init.mdm.sh \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
+    init.qcom.crashdata.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.sdio.sh \
+    init.qcom.sensors.sh \
+    init.qcom.factory.rc \
+    init.qcom.usb.sh \
     init.msm.usb.configfs.rc \
-    init.goodix.sh \
     init.qcom.bt.sh \
     init.qti.fm.sh \
     init.qcom.early_boot.sh \
@@ -292,7 +310,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     move_time_data.sh \
     move_wifi_data.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    qca6234-service.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
