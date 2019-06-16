@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=sakura
-VENDOR=xiaomi
+DEVICE=X01AD
+VENDOR=asus
 
 INITIAL_COPYRIGHT_YEAR=2018
 
@@ -61,21 +61,13 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
-extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
 
 DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
-patchelf --set-soname libicuuc-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libicuuc-v27.so
-patchelf --set-soname libminikin-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libminikin-v27.so
+IMSCMSERVICE="$BLOB_ROOT"/vendor/etc/permissions/com.qualcomm.qti.imscmservice.xml
+IMSCMSERVICE_1_1="$BLOB_ROOT"/vendor/etc/permissions/com.qualcomm.qti.imscmservice_1_1.xml
 
-patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.frameworks.sensorservice@1.0-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libvidhance_gyro.so
-patchelf --replace-needed libminikin.so libminikin-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libMiWatermark.so
-patchelf --replace-needed libicuuc.so libicuuc-v27.so $DEVICE_BLOB_ROOT/vendor/lib/libMiWatermark.so
-
-patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/bin/hw/android.hardware.camera.provider@2.4-service
-patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib/camera.device@1.0-impl.so
-patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
-patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib64/camera.device@1.0-impl.so
-patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
+sed -i "s|/system/framework/|/vendor/framework/|g" "$IMSCMSERVICE"
+sed -i "s|/system/framework/|/vendor/framework/|g" "$IMSCMSERVICE_1_1"
 
 "$MY_DIR"/setup-makefiles.sh

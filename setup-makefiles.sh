@@ -21,8 +21,8 @@ set -e
 INITIAL_COPYRIGHT_YEAR=2018
 
 # Required!
-export DEVICE=sakura
-export VENDOR=xiaomi
+export DEVICE=X01AD
+export VENDOR=asus
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -41,7 +41,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "sakura"
+write_headers "X01AD"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt true
