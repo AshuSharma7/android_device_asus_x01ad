@@ -50,14 +50,14 @@ vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_Speaker_cal.acdb
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_Headset_cal.acdb
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_General_cal.acdb
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_workspaceFile.qwsp
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_Global_cal.acdb
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_Bluetooth_cal.acdb
-vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9340_Handset_cal.acdb
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_General_cal.acdb
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_workspaceFile.qwsp
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Global_cal.acdb
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb
+vendor/etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
@@ -374,7 +374,6 @@ vendor/lib64/libscveBlobDescriptor.so
 vendor/lib64/libscveBlobDescriptor_stub.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveFaceRecognition.so
 vendor/lib64/libscveObjectSegmentation.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libscveObjectTracker.so
@@ -1766,61 +1765,61 @@ vendor/lib/libchromatix_sp2509_kingcome_sub_zsl_preview.so
 vendor/lib/libchromatix_sp2509_kingcome_sub_zsl_video.so
 
 # Camera configs
-vendor/etc/camera_config.xml
-vendor/etc/ov2281_chromatix.xml
-vendor/etc/csidtg_camera.xml
-vendor/etc/ov2680_chromatix.xml
-vendor/etc/csidtg_chromatix.xml
-vendor/etc/ov4688_chromatix.xml
-vendor/etc/gc8034_kingcome_front_chromatix.xml
-vendor/etc/ov5670_chromatix.xml
-vendor/etc/hi1333_kingcome_back_chromatix.xml
-vendor/etc/ov5670_f5670bq_chromatix.xml
-vendor/etc/imx214_chromatix.xml
-vendor/etc/ov5695_chromatix.xml
-vendor/etc/imx230_chromatix.xml
-vendor/etc/ov7251_chromatix.xml
-vendor/etc/imx230_qc2002_chromatix.xml
-vendor/etc/ov8856_bear_chromatix.xml
-vendor/etc/imx230_qc2002_with_gyro_chromatix.xml
-vendor/etc/ov8856_chromatix.xml
-vendor/etc/imx258_bear_chromatix.xml
-vendor/etc/ov8858_chromatix.xml
-vendor/etc/imx258_chromatix.xml
-vendor/etc/ov8865_chromatix.xml
-vendor/etc/imx258_lc898217xc_chromatix.xml
-vendor/etc/sk52l7_8953_chromatix.xml
-vendor/etc/imx258_mono_bear_chromatix.xml
-vendor/etc/sk52l7_chromatix.xml
-vendor/etc/imx258_mono_chromatix.xml
-vendor/etc/sk52l7sx_chromatix.xml
-vendor/etc/imx298_chromatix.xml
-vendor/etc/sk53l6_hlt_back_chromatix.xml
-vendor/etc/imx298_gt24c64_chromatix.xml
-vendor/etc/sk53l8_chromatix.xml
-vendor/etc/imx318_chromatix.xml
-vendor/etc/sk53l8_f3l8yam_chromatix.xml
-vendor/etc/imx362_chromatix.xml
-vendor/etc/sk53l8_mono_chromatix.xml
-vendor/etc/imx362_chromatix_bear.xml
-vendor/etc/sk53m2xm_chromatix.xml
-vendor/etc/imx362_gt24c64a_chromatix.xml
-vendor/etc/sk53m2xm_chromatix_bear.xml
-vendor/etc/imx376_chromatix.xml
-vendor/etc/sk53m2xx_chromatix.xml
-vendor/etc/imx378_chromatix.xml
-vendor/etc/sk53m3sm_chromatix.xml
-vendor/etc/ov12a10_bear_chromatix.xml
-vendor/etc/sk53p3sm_chromatix.xml
-vendor/etc/ov12a10_chromatix.xml
-vendor/etc/sk53p8sp_chromatix.xml
-vendor/etc/ov13850_chromatix.xml
-vendor/etc/sk54h7_hlt_front_chromatix.xml
-vendor/etc/ov13850_q13v06k_chromatix.xml
-vendor/etc/sp2509_hlt_sub_chromatix.xml
-vendor/etc/ov13855_chromatix.xml
-vendor/etc/sp2509_kingcome_sub_chromatix.xml
-vendor/etc/ov13880_chromatix.xml
+vendor/etc/camera/camera_config.xml
+vendor/etc/camera/ov2281_chromatix.xml
+vendor/etc/camera/csidtg_camera.xml
+vendor/etc/camera/ov2680_chromatix.xml
+vendor/etc/camera/csidtg_chromatix.xml
+vendor/etc/camera/ov4688_chromatix.xml
+vendor/etc/camera/gc8034_kingcome_front_chromatix.xml
+vendor/etc/camera/ov5670_chromatix.xml
+vendor/etc/camera/hi1333_kingcome_back_chromatix.xml
+vendor/etc/camera/ov5670_f5670bq_chromatix.xml
+vendor/etc/camera/imx214_chromatix.xml
+vendor/etc/camera/ov5695_chromatix.xml
+vendor/etc/camera/imx230_chromatix.xml
+vendor/etc/camera/ov7251_chromatix.xml
+vendor/etc/camera/imx230_qc2002_chromatix.xml
+vendor/etc/camera/ov8856_bear_chromatix.xml
+vendor/etc/camera/imx230_qc2002_with_gyro_chromatix.xml
+vendor/etc/camera/ov8856_chromatix.xml
+vendor/etc/camera/imx258_bear_chromatix.xml
+vendor/etc/camera/ov8858_chromatix.xml
+vendor/etc/camera/imx258_chromatix.xml
+vendor/etc/camera/ov8865_chromatix.xml
+vendor/etc/camera/imx258_lc898217xc_chromatix.xml
+vendor/etc/camera/sk52l7_8953_chromatix.xml
+vendor/etc/camera/imx258_mono_bear_chromatix.xml
+vendor/etc/camera/sk52l7_chromatix.xml
+vendor/etc/camera/imx258_mono_chromatix.xml
+vendor/etc/camera/sk52l7sx_chromatix.xml
+vendor/etc/camera/imx298_chromatix.xml
+vendor/etc/camera/sk53l6_hlt_back_chromatix.xml
+vendor/etc/camera/imx298_gt24c64_chromatix.xml
+vendor/etc/camera/sk53l8_chromatix.xml
+vendor/etc/camera/imx318_chromatix.xml
+vendor/etc/camera/sk53l8_f3l8yam_chromatix.xml
+vendor/etc/camera/imx362_chromatix.xml
+vendor/etc/camera/sk53l8_mono_chromatix.xml
+vendor/etc/camera/imx362_chromatix_bear.xml
+vendor/etc/camera/sk53m2xm_chromatix.xml
+vendor/etc/camera/imx362_gt24c64a_chromatix.xml
+vendor/etc/camera/sk53m2xm_chromatix_bear.xml
+vendor/etc/camera/imx376_chromatix.xml
+vendor/etc/camera/sk53m2xx_chromatix.xml
+vendor/etc/camera/imx378_chromatix.xml
+vendor/etc/camera/sk53m3sm_chromatix.xml
+vendor/etc/camera/ov12a10_bear_chromatix.xml
+vendor/etc/camera/sk53p3sm_chromatix.xml
+vendor/etc/camera/ov12a10_chromatix.xml
+vendor/etc/camera/sk53p8sp_chromatix.xml
+vendor/etc/camera/ov13850_chromatix.xml
+vendor/etc/camera/sk54h7_hlt_front_chromatix.xml
+vendor/etc/camera/ov13850_q13v06k_chromatix.xml
+vendor/etc/camera/sp2509_hlt_sub_chromatix.xml
+vendor/etc/camera/ov13855_chromatix.xml
+vendor/etc/camera/sp2509_kingcome_sub_chromatix.xml
+vendor/etc/camera/ov13880_chromatix.xml
 
 
 # Camera firmware
@@ -2001,7 +2000,7 @@ vendor/lib64/vendor.qti.latency@2.0.so
 
 # Display calib
 vendor/etc/qdcm_calib_data_ili9881h_720p_video_mode_dsi_panel.xml
-vendor/lib/qdcm_calib_data_inx6301_720p_video_mode_dsi_panel.xml
+vendor/etc/qdcm_calib_data_inx6301_720p_video_mode_dsi_panel.xml
 
 # DPM
 -priv-app/dpmserviceapp/dpmserviceapp.apk
@@ -2061,7 +2060,6 @@ vendor/lib64/libcppf.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/liboemcrypto.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
 vendor/lib64/libcpion.so
@@ -2136,10 +2134,6 @@ vendor/lib64/hw/cdfinger.fingerprint.default.so
 vendor/lib64/hw/fingerprint.focaltech.default.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
-vendor/lib64/libgoodixfingerprintd_binder.so
-vendor/lib64/libsoftkeymaster.so
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # FM
@@ -2161,7 +2155,7 @@ vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 vendor/lib/libgatekeeper.so
-vendor/lib64/android.hardware.gatekeeper@1.0.so
+lib64/android.hardware.gatekeeper@1.0.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/libgatekeeper.so
 
@@ -2216,7 +2210,6 @@ vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
-vendor/lib64/libqseed3.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
@@ -2310,7 +2303,7 @@ vendor/bin/hbtp_daemon
 vendor/etc/hbtp/hbtpcfg.dat
 vendor/etc/hbtp/hbtpcfg2.dat
 vendor/etc/hbtp/hbtpcfg_adsp_800s_fhd.dat
-vendor/etc/hbtp/hbtpcfg_msm8953_800h_fhd.dat
+vendor/etc/hbtp/hbtpcfg_msm8953_800s_fhd.dat
 vendor/etc/hbtp/hbtpcfg_sdm450_801s_fhdp.dat
 vendor/etc/hbtp/loader.cfg
 vendor/etc/hbtp/qtc800h.bin
@@ -2711,8 +2704,7 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libvtc_anti_algo.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.native.so
-vendor/lib64/sensors.msm8953_64.so
-vendor/lib64/android.hardware.sensors@1.0-impl.so
+lib64/android.hardware.sensors@1.0.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/hw/activity_recognition.msm8953.so
 vendor/lib/hw/activity_recognition.msm8953.so
