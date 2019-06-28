@@ -207,8 +207,8 @@ TARGET_USE_OLD_MNC_FORMAT := true
 VENDOR_SECURITY_PATCH := 2019-04-01
 
 # SELinux
-#include device/qcom/sepolicy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # We modify several neverallows, so let the build proceed
 SELINUX_IGNORE_NEVERALLOWS := true
