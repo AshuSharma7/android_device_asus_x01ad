@@ -196,7 +196,6 @@ TARGET_USE_SDCLANG := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RIL_VARIANT := caf
 TARGET_USES_OLD_MNC_FORMAT := true
@@ -208,8 +207,8 @@ TARGET_USE_OLD_MNC_FORMAT := true
 VENDOR_SECURITY_PATCH := 2019-04-01
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # We modify several neverallows, so let the build proceed
 SELINUX_IGNORE_NEVERALLOWS := true
@@ -235,5 +234,3 @@ WIFI_HIDL_FEATURE_AWARE := true
 -include vendor/asus/X01AD/BoardConfigVendor.mk
 #-include vendor/xiaomi/msm8953-common/BoardConfigVendor.mk
 
-# OTA Assert
-TARGET_OTA_ASSERT_DEVICE := x01ad,x01a,ASUS_X01A_1,ASUS_X01AD,ASUS_X01A
