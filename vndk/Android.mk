@@ -1,37 +1,37 @@
 ifeq ($(BOARD_VNDK_VERSION),)
 $(warning ************* BOARD VNDK is not enabled - compiling vndk-sp ***************************)
 VNDK_SP_LIBRARIES := \
-    android.hardware.graphics.common@1.0.so \
-    android.hardware.graphics.common@1.1.so \
-    android.hardware.graphics.mapper@2.0.so \
-    android.hardware.graphics.mapper@2.1.so \
-    android.hardware.renderscript@1.0.so \
-    android.hidl.memory.token@1.0.so \
-    android.hidl.memory@1.0.so \
-    android.hidl.memory@1.0-impl.so \
-    libRSCpuRef.so \
-    libRSDriver.so \
-    libRS_internal.so \
-    libbacktrace.so \
-    libbase.so \
-    libbcinfo.so \
-    libblas.so \
-    libc++.so \
-    libcompiler_rt.so \
-    libcutils.so \
-    libhardware.so \
-    libhidlbase.so \
-    libhidlmemory.so \
-    libhidltransport.so \
-    libhwbinder.so \
-    libhwbinder_noltopgo.so \
-    libion.so \
-    liblzma.so \
-    libunwind.so \
-    libunwindstack.so \
-    libutils.so \
-    libutilscallstack.so \
-    libz.so
+    android.hardware.graphics.common@1.0 \
+    android.hardware.graphics.common@1.1 \
+    android.hardware.graphics.mapper@2.0 \
+    android.hardware.graphics.mapper@2.1 \
+    android.hardware.renderscript@1.0 \
+    android.hidl.memory.token@1.0 \
+    android.hidl.memory@1.0 \
+    android.hidl.memory@1.0-impl \
+    libRSCpuRef \
+    libRSDriver \
+    libRS_internal \
+    libbacktrace \
+    libbase \
+    libbcinfo \
+    libblas \
+    libc++ \
+    libcompiler_rt \
+    libcutils \
+    libhardware \
+    libhidlbase \
+    libhidlmemory \
+    libhidltransport \
+    libhwbinder \
+    libhwbinder_noltopgo \
+    libion \
+    liblzma \
+    libunwind \
+    libunwindstack \
+    libutils \
+    libutilscallstack \
+    libz
 
 EXTRA_VENDOR_LIBRARIES := \
     android.hidl.base@1.0 \
