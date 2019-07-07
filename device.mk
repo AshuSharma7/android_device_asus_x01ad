@@ -85,15 +85,14 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
+    android.hardware.audio@4.0-impl \
     android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.effect@2.0-service \
-    android.hardware.soundtrigger@2.0-impl \
-    android.hardware.soundtrigger@2.0-service \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
-    audio.primary.msm8953 \
     audio.r_submix.default \
+    libaudio_log_utils \
     audio.usb.default \
     libaudio-resampler \
     libqcompostprocbundle \
@@ -129,11 +128,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    android.frameworks.displayservice@1.0 \
     libxml2 \
-    Snap
+    SnapdragonCamera
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -244,11 +243,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8953
-
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
-    android.hardware.light@2.0-service
+    android.hardware.light@2.0-service.x01ad
 	
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -272,7 +267,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+
+# Media Extensions
+PRODUCT_PACKAGES += \
+    libavmediaserviceextensions \
+    libmediametrics \
+    libregistermsext \
+    mediametrics
 
 # Netutils
 PRODUCT_PACKAGES += \
@@ -353,18 +356,16 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio@1.0 \
-    android.hardware.radio@1.1 \
+# RIL
+PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
-    android.hardware.secure_element@1.0 \
-    android.hardware.radio.deprecated@1.0 \
-    librmnetctl \
+    android.hardware.radio.config@1.0 \
     rild \
-    libprotobuf-cpp-full \
-    libcnefeatureconfig \
+    librmnetctl \
     libxml2 \
-    telephony-ext
+    libprotobuf-cpp-full \
+    telephony-ext \
+    qti-telephony-common
 
 PRODUCT_BOOT_JARS += \
     telephony-ext \
@@ -376,10 +377,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/configs/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 # Sensors
-#PRODUCT_PACKAGES += \
-#    android.hardware.sensors@1.0-impl \
-#    android.hardware.sensors@1.0-service \
-#    libsensorndkbridge
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -404,7 +405,7 @@ PRODUCT_PACKAGES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service.basic
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -430,17 +431,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
-# Wifi
+# WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
+    libwpa_client \
     hostapd \
-    hostapd_cli \
-    libwifi-hal-qcom \
-    wcnss_service \
-    wificond \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    wifi-mac-generator
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
