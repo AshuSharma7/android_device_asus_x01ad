@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2280
@@ -75,9 +75,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml
 
-# Device Properties
-#-include $(LOCAL_PATH)/prop.mk
-
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -93,6 +90,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
+    audio_log_utils \
     libaacwrapper \
     libaudio-resampler \
     libqcomvisualizer \
@@ -144,9 +142,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.device@1.0-impl \
+    android.hardware.camera.device@3.2-impl \
+    android.hardware.camera.device@3.3-impl \
+    android.hardware.camera.device@3.4-impl \
+    android.hardware.camera.common@1.0-impl \
+    android.hardware.camera.device@1.0-service \
+    android.hardware.camera.device@3.2-service \
+    android.hardware.camera.device@3.3-service \
+    android.hardware.camera.device@3.4-service \
     android.hardware.camera.provider@2.4-service \
     libxml2 \
-    SnapdragonCamera
+    snap
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -183,10 +190,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.1-service.clearkey
 
 # Ebtables
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebtc
+#PRODUCT_PACKAGES += \
+#    ebtables \
+#    ethertypes \
+#    libebtc
 
 # FM
 PRODUCT_PACKAGES += \
@@ -379,8 +386,12 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.0 \
+    android.hardware.radio.deprecated@1.0 \
     android.hardware.radio@1.2 \
     android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
     rild \
     librmnetctl \
     libxml2 \
@@ -389,8 +400,7 @@ PRODUCT_PACKAGES += \
     qti-telephony-common
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext \
-    qcrilhook
+    telephony-ext
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -437,7 +447,10 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     vndk-sp
-
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.sensorservice@1.0-v28.so \
+    prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0-v28.so
+    
 # VR
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
@@ -466,7 +479,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Vendor properties
--include $(LOCAL_PATH)/vendor_prop.mk
+#-include $(LOCAL_PATH)/vendor_prop.mk
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
