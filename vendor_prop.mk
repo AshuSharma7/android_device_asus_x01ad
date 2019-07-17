@@ -145,4 +145,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sdm.debug.disable_skip_validate=1 \
     persist.timed.enable=true \
     vendor.video.disable.ubwc=1 \
-    persist.debug.wfd.enable=0 \
+    persist.debug.wfd.enable=0
