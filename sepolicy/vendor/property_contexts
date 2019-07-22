@@ -1,3 +1,13 @@
+# Audio
+tas.smartamp.           u:object_r:vendor_audio_prop:s0
+
+# Camera
+persist.camera.         u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.  u:object_r:vendor_camera_prop:s0
+ro.camera.              u:object_r:vendor_camera_prop:s0
+camera.                 u:object_r:vendor_camera_prop:s0
+vendor.camera           u:object_r:vendor_camera_prop:s0
+
 persist.net.doxlat                            u:object_r:vendor_net_radio_prop:s0
 persist.vendor.camera.debug.logfile           u:object_r:vendor_cfg_prop:s0
 persist.nfc                                   u:object_r:nfc_prop:s0
@@ -24,3 +34,5 @@ vendor.debug.camera.prop_bokeh                u:object_r:vendor_camera_prop:s0
 vendor.debug.camera.prop_hdr                  u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.bokeh.dumpimg           u:object_r:vendor_camera_prop:s0
 vendor.debug.camera.prop_dis                  u:object_r:vendor_camera_prop:s0
+sys.nvram.btmac                               u:object_r:nvram_btwifi_prop:s0
+sys.nvram.wifimac                             u:object_r:nvram_btwifi_prop:s0
