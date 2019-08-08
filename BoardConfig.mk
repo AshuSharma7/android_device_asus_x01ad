@@ -73,7 +73,6 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 
 # Camera
-BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_TS_MAKEUP := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
@@ -197,8 +196,8 @@ VENDOR_SECURITY_PATCH := 2019-04-01
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += EVICE_PATH)/sepolicy/private
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # We modify several neverallows, so let the build proceed
