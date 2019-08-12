@@ -77,7 +77,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.location.osnlp.package=com.google.android.gms \
     ro.location.osnlp.region.package= \
     media.aac_51_output_enabled=true \
-    media.msm8956hw=0 \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true \
     persist.mm.sta.enable=0 \

@@ -185,6 +185,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RIL_VARIANT := caf
+TARGET_USES_ALTERNATIVE_NETWORK_MANUAL_SELECT := true
 
 # Telephony
 
@@ -192,7 +193,7 @@ TARGET_RIL_VARIANT := caf
 #TARGET_USE_OLD_MNC_FORMAT := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2019-04-01
+VENDOR_SECURITY_PATCH := 2019-08-01
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
