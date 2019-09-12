@@ -143,6 +143,8 @@ PRODUCT_PACKAGES += \
 android.frameworks.displayservice@1.0_32 \
 android.hardware.camera.provider@2.4-impl \
 android.hardware.camera.provider@2.4-service \
+vendor.qti.hardware.camera.device@1.0 \
+android.frameworks.displayservice@1.0 \
 libxml2 \
 snap
 
@@ -420,7 +422,7 @@ vendor.lineage.trust@1.0-service
 
 # USB HAL
 PRODUCT_PACKAGES += \
-android.hardware.usb@1.0-service.basic
+android.hardware.usb@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -454,9 +456,6 @@ $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
-
-#Some Hals
-$(call inherit-product, device/asus/X01AD/treble.mk)
 
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
