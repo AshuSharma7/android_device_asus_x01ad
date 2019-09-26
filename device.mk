@@ -415,9 +415,6 @@ PRODUCT_COPY_FILES += \
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
-
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
